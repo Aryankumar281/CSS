@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    background: #444444;
+}
+ul{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.faq{
+    margin: 60px auto;
+    width: 600px;
+}
+.faq li{
+    list-style: none;
+    width: 100%;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #2f2f2f;
+    color: #d2d2d2;
+    box-shadow: -10px 10px 5px #000000;
+}
+.faq li label{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+}
+label::before{
+    content: '+';
+    margin-right: 10px;
+    font-size: 24px;
+    font-weight: 600;
+}
+input[type="checkbox"]{
+    display: none;
+}
+.faq .faq-content{
+    color: #aeaeae;
+    padding: 0 10px;
+    line-height: 26px;
+    max-height: 0;
+    overflow: hidden;
+    font-weight: 600;
+    transition: max-height 0.2s, padding 0.5s;
+}
+.faq input[type="checkbox"]:checked + label + .faq-content{
+    max-height: 400px;
+    padding: 10px 10px;
+}
+
+.faq input[type="checkbox"]:checked + label::before{
+    content: "-";
+}
