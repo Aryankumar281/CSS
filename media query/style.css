@@ -1,0 +1,55 @@
+body{
+    background-color:red;
+}
+div{
+    font-size: x-large;
+    text-align: center;
+}
+div::after{
+    content: "Welcome to the demo";
+}
+/* for extra small device */
+@media only screen and (max-width:600px){
+    body{
+        background-color: blue;
+    }
+    div::after{
+        content: "this is for small devices";
+    }
+}
+/* for small device(portrait tablet,large phone) */
+@media only screen and (min-width:600px){
+    body{
+        background-color: pink;
+    }
+    div::after{
+        content: "this is for portrait tablet and large mobile";
+    }
+}
+/* for medium devices(landscape tablet) */
+@media only screen and (min-width:768px){
+    body{
+        background-color: rgb(21, 232, 102);
+    }
+    div::after{
+        content: "this is for landscape tablets";
+    }
+}
+/* for large devices(laptop and desktop) */
+@media only screen and (min-width:992px){
+    body{
+        background-color: rgb(235, 227, 13);
+    }
+    div::after{
+        content: "this is for med size laptop and desktop";
+    }
+}
+/* for extra large devices(large laptop and desktop) */
+@media only screen and (min-width:1200px){
+    body{
+        background-color: rgb(232, 83, 9);
+    }
+    div::after{
+        content: "this for large laptop and desktop";
+    }
+}
